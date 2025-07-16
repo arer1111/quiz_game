@@ -1,23 +1,42 @@
-# quiz_game
-This will be a general knowledge trivia quiz where users answer multiple-choice questions. The game tracks the score, provides feedback on correct/incorrect answers, and displays the final result at the end.
+# Quiz Game
 
+## Project Overview
 
-HTML Structure:
-- I need to create a quiz container this will contain: start screen, quiz screen, result screen 
-- I need to a question display where the questions will be displayed 
-- I need to create answer buttons there will be 4 options for the 4 different answers 
-- I need to add navigation buttons : start button, next button (start, next, restart)
-- Include a score tracker
-- I need to make it mobile-first & responsive
+This is a browser-based quiz game built with HTML, CSS, and TypeScript using Vite. Players answer multiple-choice questions, track their score, and see results at the end. The game is mobile-friendly and uses click events for interaction.
 
-CSS:
-- I need to style the quiz container by adding the card layout, the borders (card layout, shadows, borders)
-- I need to add styling so it can highlight correct/incorrect answers. Green colour means correct answer and red colour means incorrect answer  
-- I need to ensure responsive design works will on mobile and desktop device 
+## Game Plan
 
-TypeScript Work:
-- I need to gather questions Load & display questions (from a predefined list)
-- I need to track user answers to make a score on how many they have correctly answered and to update score  
-- I need to make buttons start, next and restart 
-- I need to disable buttons after selection to prevent multiple answers  
-- I need to show the results for the final score and the updated score
+### Description
+
+- Players start on a welcome screen with a "Start Quiz" button.
+- Each question displays a prompt, four answer options, and a progress indicator.
+- Clicking an answer highlights it as correct or incorrect, updates the score, and shows a "Next" button.
+- After all questions, a results screen shows the final score with a "Play Again" option.
+
+### How It's Built
+
+- **HTML**: Structured in `src/index.html` with containers for start screen, questions, and results.
+- **CSS**: Styled in `src/styles.css` with a mobile-first approach, using a grid for answer buttons and media queries for responsiveness.
+- **TypeScript**: Managed in `src/main.ts` and `src/quizData.ts`. Uses interfaces for questions, click event listeners, and DOM manipulation.
+- **Vite**: Configured in `vite.config.ts` with `root: 'src'` for development and build.
+
+### Feature List (Prioritized)
+
+1. Start screen with "Start Quiz" button.
+2. Question slides with multiple-choice options.
+3. Score tracking and progress display.
+4. Correct/incorrect answer feedback.
+5. Results screen with "Play Again" button.
+6. Mobile-first responsive design.
+
+## Setup
+
+- Clone the repo: `git clone <repo-url>`
+- Install dependencies: `npm install`
+- Run locally: `npm run dev`
+- Build for production: `npm run build`
+- Preview: `npm run preview`
+
+## Hosting
+
+- Hosted on GitHub Pages (to be set up).
