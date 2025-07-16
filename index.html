@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <!-- <link rel="stylesheet" href="styles.css" />-->
+    <script type="module" crossorigin src="/quiz_game/assets/index-D-Icxt5m.js"></script>
+    <link rel="stylesheet" crossorigin href="/quiz_game/assets/index-Dt95lD4Z.css">
+  </head>
+  <body>
+    <div id="quiz-container">
+      <h1>Quiz Challenge</h1>
+      <div id="score-display">Score: <span id="score">0</span></div>
+      <div id="progress">Question 0/0</div>
+      <div id="start-screen">
+        <p>Test your knowledge with this fun quiz!</p>
+        <button id="start-btn" class="btn">Start Quiz</button>
+      </div>
+      <div id="question-container" class="hide">
+        <img id="question-image" src="" alt="Question Image" class="hide" />
+        <p id="question"></p>
+        <div id="answer-buttons" class="btn-grid"></div>
+        <button id="next-btn" class="btn hide">Next Question</button>
+      </div>
+      <div id="results" class="hide"></div>
+    </div>
+  </body>
+</html>
