@@ -4,26 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="quiz-container">
-      <h1 class="quiz-container__title">Quiz Challenge</h1>
-      <div class="quiz-container__score-display">
-        Score: <span class="quiz-container__score">0</span>
-      </div>
-      <div class="quiz-container__progress">Question 0/0</div>
-      <div class="quiz-container__start-screen">
+    <div id="quiz-container">
+      <h1>Quiz Challenge</h1>
+      <div id="score-display">Score: <span id="score">0</span></div>
+      <div id="progress">Question 0/0</div>
+      <div id="start-screen">
         <p>Test your knowledge with this fun quiz!</p>
-        <button class="btn">Start Quiz</button>
+        <button id="start-btn" class="btn">Start Quiz</button>
       </div>
-      <div class="quiz-container__question-container hide">
-        <p class="quiz-container__question"></p>
-        <div class="quiz-container__answer-buttons"></div>
-        <button class="btn quiz-container__next-btn hide">Next Question</button>
+      <div id="question-container" class="hide">
+        <img id="question-image" src="" alt="Question Image" class="hide" />
+        <p id="question"></p>
+        <div id="answer-buttons" class="btn-grid"></div>
+        <button id="next-btn" class="btn hide">Next Question</button>
       </div>
-      <div class="quiz-container__results hide"></div>
+      <div id="results" class="hide"></div>
     </div>
-    <script type="module" src="./main.ts"></script>
+    <script type="module" src="main.ts"></script>
   </body>
 </html>
