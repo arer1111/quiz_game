@@ -12,25 +12,25 @@ export const questions: Question[] = [
     question: "Which gas planet is the largest planet in the Solar System?",
     options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
     answer: 0, // Jupiter
-    image: "assests/question1.jpg",
+    image: "assests/image0-2.jpg",
   },
   {
     question: "In what year were the first Winter Olympics Games held?",
     options: ["1954", "1890", "1924", "1974"],
     answer: 2, // 1924
-    image: "assests/question2.jpg",
+    image: "assests/image5.jpg",
   },
   {
     question: "Where were French fries invented?",
     options: ["France", "Belgium", "The US", "Canada"],
     answer: 1, // Belgium
-    image: "assests/question3.jpg",
+    image: "assests/image1.jpeg",
   },
   {
     question: "How many bones does an adult human have?",
     options: ["200", "206", "216", "215"],
     answer: 1, // 206
-    image: "assests/question4.jpg",
+    image: "assests/image2.jpeg",
   },
   {
     question: "What are the three main 'simple types' in TypeScript?",
@@ -41,12 +41,12 @@ export const questions: Question[] = [
       "Object, string, number",
     ],
     answer: 0, // Boolean, Number, String
-    image: "assests/question5.jpg",
+    image: "assests/image3.png",
   },
   {
     question: "What is the capital of Australia?",
     options: ["Sydney", "Melbourne", "Canberra", "Perth"],
     answer: 2, // Canberra
-    image: "assests/question6.jpg",
+    image: "assests/image4.png",
   },
 ];
