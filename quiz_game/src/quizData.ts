@@ -1,4 +1,6 @@
-// Define the Question interface for type safety
+// Define the Question interface for type safety. An interface is a TypeScript feature that allows you to define the structure of an object. In this case it shows the structure of a quiz question.
+// The export keyword makes the interface available for import in other files - in this case, the main.ts file.
+// The quizData.ts file is separate to keep the quiz questions organized and distinct from the main logic. This makes it easier to update or add questions without changing the main script. It also improves code readability and maintainability by separating data from functionality.
 export interface Question {
   question: string;
   options: string[];
@@ -6,7 +8,7 @@ export interface Question {
   image: string; // Optional image URL for the question
 }
 
-// Quiz questions array
+// Quiz questions array. This is an array of objects to hold the quiz questions. Each object in the array follows the structure defined by the Question interface.
 export const questions: Question[] = [
   {
     question: "Which gas planet is the largest planet in the Solar System?",

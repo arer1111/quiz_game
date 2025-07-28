@@ -1,22 +1,32 @@
 <!DOCTYPE html>
+<!-- This declaration specifies the document type as HTML5, ensuring compliance with HTML standards and enabling its features – such as semantic elements, which improve readability.-->
 <html lang="en">
+  <!-- This defines HTML document is set to English-->
   <head>
+    <!-- contains metadata about the HTML document, which provides information for the browser and search engines. This information is not appear in the visible UI.-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
+    <!--This sets the page title to Quiz Game which is displayed in the window.-->
     <link rel="stylesheet" href="styles.css" />
+    <!-- This is links to a CSS file which applies visual styling to the quiz. -->
   </head>
   <body>
+    <!-- This contains all of the visible content and interactive elements of the quiz. To hold the UI elements the users can see and intract with. -->
     <div id="quiz-container">
+      <!-- Div acts as a container to group other elements like buttons or text, in the quiz's user interface. It helps structure the quiz. This allows TypeScript to call specific section and CSS to style them.  -->
+      <!-- id is used to as an unquiue identifer attribute to distinguish different HTML elements from others -->
       <h1>Quiz Challenge</h1>
       <div id="score-display">Score: <span id="score">0</span></div>
       <div id="progress">Question 0/0</div>
       <div id="start-screen">
         <p>Test your knowledge with this fun quiz!</p>
+        <!-- p adds a paragraph to break down the text and making it look good presentable. -->
         <button id="start-btn" class="btn">Start Quiz</button>
       </div>
       <div id="question-container" class="hide">
         <img id="question-image" src="" alt="Question Image" class="hide" />
+        <!-- This is used to add images where it is necessary. Class hide is to initially hide it. It is later updated in TypeScript. -->
         <p id="question"></p>
         <div id="answer-buttons" class="btn-grid"></div>
         <button id="next-btn" class="btn hide">Next Question</button>
@@ -24,5 +34,6 @@
       <div id="results" class="hide"></div>
     </div>
     <script type="module" src="main.ts"></script>
+    <!-- This links main.ts as TypeScript code controls the quiz's logic to manipulate the DOM and handle user interactions-->
   </body>
 </html>

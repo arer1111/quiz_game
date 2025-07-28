@@ -1,14 +1,24 @@
 /* Global hide class */
+/* this is an utilty class that applies display: none to any HTML element making it invisible and making it visible again when needed.   */
 .hide {
   display: none;
 }
 
+/* "*" this means the styling applies to all HTML elements in the quiz game. 
+- box-sizing is to ensure padding and border are included in element dimensions
+-  margin: 0 eliminates default margins from all elements
+- padding: 0 removes deault padding =, providing a lean slate for custom spacing */
 /* Reset and base styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+/* this is the base style for the body of the quiz game.
+- it is set to use a sans-serif font for consistency
+- flexbox is used to center the content both vertically and horizontally
+- background is a graident from purple to blue 
+*/
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -21,6 +31,10 @@ body {
   color: #333;
 }
 
+/* - width: 100% to make quiz container span full width of the centered body 
+- max-width limits container's width to 800px to prevent it from becoming too wide on large screens 
+- border-radius to round the containers for a smooth modern appearence 
+- padding to add internal spacing and centres all text for a balanced quiz layout */
 #quiz-container {
   width: 100%;
   max-width: 800px;
@@ -31,12 +45,22 @@ body {
   text-align: center;
 }
 
+/* - margin bottom done to add 25px of space below the heading to separate it from other elements 
+- for heading to make it larger as it is the title of the quiz game 
+- text-shadow is adding slight depth for visual polish  */
 h1 {
   color: #2c3e50;
   margin-bottom: 25px;
   font-size: 2.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
+/* - position absolute to place the score display in the top right corner of the quiz container to keep it visible at all times
+- background white to make it stand out against the quiz container
+- padding to add space around the score text
+- border-radius to round the corners to match the quiz container's style
+- font-weight bold to emphasize the score
+ */
 
 #score-display {
   position: absolute;
@@ -50,10 +74,15 @@ h1 {
   font-size: 1.2rem;
 }
 
+/* - making it blue for emphasis 
+- to increase score font */
 #score-display #score {
   color: #3498db;
   font-size: 1.3rem;
 }
+
+/* - margin 15px to add spacing above and belwo the progress to seperate it from other elements
+*/
 
 #progress {
   margin: 15px 0;
@@ -61,6 +90,7 @@ h1 {
   color: #7f8c8d;
   font-weight: 500;
 }
+/* - p targets all the <p> elements insdie the element with the ID start screen */
 
 #start-screen p {
   margin-bottom: 30px;
@@ -69,9 +99,13 @@ h1 {
   color: #34495e;
 }
 
+/* - transitions all quiz question and applies a smooth 0.3-scecond transition */
 #question-container {
   transition: all 0.3s ease;
 }
+
+/* - targets the element wit ID question-image 
+max-height is to esnure the image sclaes to fit its container without stretching */
 #question-image {
   max-width: 100%;
   height: auto;
@@ -81,6 +115,8 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* targets the element with ID question inside question-container, which has the quiz question 
+the font size is to make the question text larger and bold for emphasis  */
 #question-container #question {
   font-size: 1.4rem;
   margin-bottom: 30px;
@@ -89,6 +125,8 @@ h1 {
   color: #2c3e50;
 }
 
+/* targest elements with class bnt-grid container for answer buttons 
+display grid is to arrange byttons in a 2-column grid with equal widths */
 .btn-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -96,12 +134,17 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* - applies styles when the screen width is 600px or smaller like moblie devices
+- ensures buttons stack vertically for better usabiltiy on moblie */
 @media (max-width: 600px) {
   .btn-grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* - targets all buttons inside the quiz game
+- added padding for larger clickable area
+*/
 .btn {
   background: #3498db;
   color: white;
@@ -114,31 +157,41 @@ h1 {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* - targets when non-disabled buttons hovered over  */
 .btn:hover:not(:disabled) {
   transform: translateY(-3px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  background: #4aa8e8; /* Approximated color.scale($primary, $lightness: 10.6694560669%) */
+  background: #4aa8e8;
 }
 
+/* - only applies to enabled buttons to move buttom sightly down to simulate a press */
 .btn:active:not(:disabled) {
   transform: translateY(-1px);
 }
 
+/* - only for disabled button 
+- opacity fades the button to indicate it's inactive 
+- cursor not allowed to ensure the button can not be clicked  */
 .btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
+/* - targets buttons for correct answers clicked making it green to indicate a correct choice */
 .btn.correct {
   background: #2ecc71;
   color: white;
 }
+
+/* - only for when wrong answer is chosen to insidcate an incorrect choice */
 
 .btn.incorrect {
   background: #e74c3c;
   color: white;
 }
 
+/*- for next button
+- margin 0 auto to make button horizontal */
 #next-btn {
   margin: 0 auto;
   padding: 12px 40px;
@@ -146,25 +199,32 @@ h1 {
   background: #9b59b6;
 }
 
+/* - targets the next-buton when hovered over 
+- provides visual feedback to indicate the button is interactive */
 #next-btn:hover {
-  background: #4aa8e8; /* Approximated color.scale($primary, $lightness: 10.6694560669%) */
+  background: #4aa8e8;
 }
 
+/* - targets <h2> element inside the element with ID results*/
 #results h2 {
   margin-bottom: 20px;
   color: #2c3e50;
 }
 
+/* - targets <p> element inside the element with ID results*/
 #results p {
   font-size: 1.3rem;
   margin-bottom: 30px;
 }
 
+/* - targets <span> element inside the <p> element inside the element with ID results*/
 #results p span {
   font-weight: bold;
   color: #3498db;
 }
 
+/* - targets the button inside the element with ID results
+- background set to green to differentiate from answer butttons*/
 #results .btn {
   background: #27ae60;
   padding: 12px 35px;
